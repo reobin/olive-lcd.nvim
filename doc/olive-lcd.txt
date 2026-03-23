@@ -1,0 +1,47 @@
+*olive-lcd.txt*  A Game Boy-inspired olive colorscheme for Neovim
+
+INTRODUCTION                                                    *olive-lcd*
+
+olive-lcd.nvim is a Neovim colorscheme built from a Game Boy LCD style olive
+palette, expanded with muted earthy accents for syntax clarity.
+
+USAGE                                                           *olive-lcd-usage*
+
+  :set background=dark
+  :colorscheme olive-lcd
+
+  :set background=light
+  :colorscheme olive-lcd
+
+LUA SETUP                                                       *olive-lcd-setup*
+
+  require('olive_lcd').setup({
+    transparent = false,
+    styles = {
+      comments = {},
+      keywords = { bold = true },
+      functions = {},
+      strings = {},
+      variables = {},
+    },
+    plugins = {
+      telescope = true,
+      gitsigns = true,
+      which_key = true,
+      cmp = true,
+      neo_tree = true,
+      oil = true,
+      notify = true,
+      mini = true,
+      treesitter_context = true,
+    },
+    overrides = {},
+  })
+
+  vim.cmd.colorscheme('olive-lcd')
+
+COMPATIBILITY                                                   *olive-lcd-compat*
+
+- Neovim includes Treesitter, diagnostics, semantic tokens, and plugin groups.
+
+vim:tw=78:ts=8:noet:ft=help:norl:

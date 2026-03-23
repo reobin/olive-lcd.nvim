@@ -1,0 +1,96 @@
+local M = {}
+
+local base = {
+  lcd_dark = '#33372f',
+  lcd_mid_dark = '#717967',
+  lcd_mid_light = '#b8bdb2',
+  lcd_light = '#d7d9d3',
+}
+
+local variants = {
+  dark = {
+    name = 'dark',
+    background = 'dark',
+    bg = '#171a15',
+    bg_alt = '#232720',
+    bg_float = '#292d26',
+    bg_visual = '#363c34',
+    bg_statusline = '#20241d',
+    border = '#858d80',
+    line = '#9aa393',
+    fg = '#fbfcf6',
+    fg_alt = '#edf0e6',
+    fg_idle = '#d8dece',
+    muted = '#c0c7b7',
+    subtle = '#99a293',
+    selection = '#616b5c',
+    cursor = '#fbfcf7',
+    olive = '#bccd80',
+    olive_bright = '#ecf6ae',
+    amber = '#f7c775',
+    sand = '#fbe09f',
+    teal = '#a5d6cb',
+    cyan = '#90dde4',
+    rust = '#f5a764',
+    red = '#ea938b',
+    violet = '#dac3ed',
+    diff_add = '#2d4227',
+    diff_change = '#564d30',
+    diff_delete = '#653633',
+    diff_text = '#98854b',
+    search = '#bd9d46',
+    search_current = '#ffd36c',
+    error_bg = '#613330',
+    warn_bg = '#61492f',
+    info_bg = '#284d4b',
+    hint_bg = '#345033',
+    none = 'NONE',
+  },
+  light = {
+    name = 'light',
+    background = 'light',
+    bg = '#eceee8',
+    bg_alt = '#dde1d8',
+    bg_float = '#d1d6cc',
+    bg_visual = '#c5cbbf',
+    bg_statusline = '#d5dad0',
+    border = '#98a091',
+    line = '#7f8778',
+    fg = '#262a24',
+    fg_alt = '#373d35',
+    fg_idle = '#4c5348',
+    muted = '#5e6558',
+    subtle = '#778070',
+    selection = '#a9b0a2',
+    cursor = '#181b16',
+    olive = '#3d4e13',
+    olive_bright = '#4f6720',
+    amber = '#7a3d00',
+    sand = '#6f4b00',
+    teal = '#18493f',
+    cyan = '#004f67',
+    rust = '#8f3900',
+    red = '#6a3431',
+    violet = '#5c4772',
+    diff_add = '#c8d2b8',
+    diff_change = '#d0ccb7',
+    diff_delete = '#dcbeb6',
+    diff_text = '#baa86f',
+    search = '#7a5a08',
+    search_current = '#6f4f08',
+    error_bg = '#e5cbc4',
+    warn_bg = '#e0d3b5',
+    info_bg = '#c8dad7',
+    hint_bg = '#cfdbcf',
+    none = 'NONE',
+  },
+}
+
+function M.get(variant)
+  local name = variant or vim.o.background
+  local palette = vim.deepcopy(variants[name] or variants.dark)
+  palette.base = vim.deepcopy(base)
+  return palette
+end
+
+return M
