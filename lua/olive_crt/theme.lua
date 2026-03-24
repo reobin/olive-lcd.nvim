@@ -1,6 +1,6 @@
-local config = require('olive_lcd.config')
-local palette = require('olive_lcd.palette')
-local util = require('olive_lcd.util')
+local config = require('olive_crt.config')
+local palette = require('olive_crt.palette')
+local util = require('olive_crt.util')
 
 local M = {}
 
@@ -28,11 +28,11 @@ function M.groups()
   local opts = config.options
 
   return util.merge_groups(
-    require('olive_lcd.groups.editor').get(c, opts),
-    require('olive_lcd.groups.syntax').get(c, opts),
-    require('olive_lcd.groups.treesitter').get(c, opts),
-    require('olive_lcd.groups.lsp').get(c, opts),
-    require('olive_lcd.groups.plugins').get(c, opts),
+    require('olive_crt.groups.editor').get(c, opts),
+    require('olive_crt.groups.syntax').get(c, opts),
+    require('olive_crt.groups.treesitter').get(c, opts),
+    require('olive_crt.groups.lsp').get(c, opts),
+    require('olive_crt.groups.plugins').get(c, opts),
     opts.overrides
   )
 end

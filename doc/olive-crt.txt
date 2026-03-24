@@ -1,21 +1,21 @@
-*olive-lcd.txt*  A Game Boy-inspired olive colorscheme for Neovim
+*olive-crt.txt*  A Game Boy-inspired olive colorscheme for Neovim
 
-INTRODUCTION                                                    *olive-lcd*
+INTRODUCTION                                                    *olive-crt*
 
-olive-lcd.nvim is a Neovim colorscheme built from a Game Boy LCD style olive
+olive-crt.nvim is a Neovim colorscheme built from a Game Boy CRT style olive
 palette, expanded with muted earthy accents for syntax clarity.
 
-USAGE                                                           *olive-lcd-usage*
+USAGE                                                           *olive-crt-usage*
 
   :set background=dark
-  :colorscheme olive-lcd
+  :colorscheme olive-crt
 
   :set background=light
-  :colorscheme olive-lcd
+  :colorscheme olive-crt
 
-LUA SETUP                                                       *olive-lcd-setup*
+LUA SETUP                                                       *olive-crt-setup*
 
-  require('olive_lcd').setup({
+  require('olive_crt').setup({
     transparent = false,
     styles = {
       comments = {},
@@ -38,9 +38,9 @@ LUA SETUP                                                       *olive-lcd-setup
     overrides = {},
   })
 
-  vim.cmd.colorscheme('olive-lcd')
+  vim.cmd.colorscheme('olive-crt')
 
-COMPATIBILITY                                                   *olive-lcd-compat*
+COMPATIBILITY                                                   *olive-crt-compat*
 
 - Neovim includes Treesitter, diagnostics, semantic tokens, and plugin groups.
 
