@@ -1,10 +1,10 @@
 local M = {}
 
 local base = {
-  lcd_dark = '#33372f',
-  lcd_mid_dark = '#717967',
-  lcd_mid_light = '#b8bdb2',
-  lcd_light = '#d7d9d3',
+  crt_dark = '#33372f',
+  crt_mid_dark = '#717967',
+  crt_mid_light = '#b8bdb2',
+  crt_light = '#d7d9d3',
 }
 
 local variants = {

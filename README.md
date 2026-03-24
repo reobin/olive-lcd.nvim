@@ -1,16 +1,10 @@
-# `olive-lcd.nvim`
+# `olive-crt.nvim`
 
-`olive-lcd.nvim` is a neovim colorscheme shaped around a retro olive LCD look, expanded into a readable editor theme with both dark and light variants.
+`olive-crt.nvim` is a neovim colorscheme shaped around a retro olive CRT look, expanded into a readable editor theme with both dark and light variants.
 
-The original four source tones are used as the backbone for backgrounds and default foregrounds:
+![olive-crt base palette swatch](assets/olive-crt-swatch.svg)
 
-![olive-lcd base palette swatch](assets/olive-lcd-swatch.svg)
-
-From there, `olive-lcd.nvim` adds restrained earthy accents so code stays clear across syntax groups, diagnostics, git changes, search, and modern Neovim UI.
-
-## Preview
-
-![olive-lcd.nvim dark and light theme preview](assets/olive-lcd-preview.png)
+![olive-crt.nvim dark and light theme preview](assets/olive-crt-preview.png)
 
 ## Features
 
@@ -26,7 +20,7 @@ With `lazy.nvim`:
 
 ```lua
 {
-  "reobin/olive-lcd.nvim",
+  "reobin/olive-crt.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
@@ -36,23 +30,23 @@ With `lazy.nvim`:
 ## Usage
 
 ```lua
-vim.cmd.colorscheme("olive-lcd")
+vim.cmd.colorscheme("olive-crt")
 ```
 
 Switch between variants with Neovim's built-in background setting:
 
 ```vim
 set background=dark
-colorscheme olive-lcd
+colorscheme olive-crt
 
 set background=light
-colorscheme olive-lcd
+colorscheme olive-crt
 ```
 
 ## Setup
 
 ```lua
-require("olive_lcd").setup({
+require("olive_crt").setup({
   transparent = false,
   styles = {
     comments = {},
@@ -79,9 +73,9 @@ require("olive_lcd").setup({
 Then load the colorscheme:
 
 ```lua
-vim.cmd.colorscheme("olive-lcd")
+vim.cmd.colorscheme("olive-crt")
 ```
 
 ## Notes
 
-- Neovim support targets modern highlight groups such as `@markup.*`, `@lsp.type.*`, `LspInlayHint`, and `Diagnostic*`.
+- neovim support targets modern highlight groups such as `@markup.*`, `@lsp.type.*`, `LspInlayHint`, and `Diagnostic*`.
