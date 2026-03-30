@@ -5,22 +5,27 @@ local util = require('olive_crt.util')
 local M = {}
 
 local function terminal_colors(c)
-  vim.g.terminal_color_0 = c.bg
-  vim.g.terminal_color_1 = c.red
-  vim.g.terminal_color_2 = c.olive
-  vim.g.terminal_color_3 = c.amber
-  vim.g.terminal_color_4 = c.cyan
-  vim.g.terminal_color_5 = c.violet
-  vim.g.terminal_color_6 = c.teal
-  vim.g.terminal_color_7 = c.fg
-  vim.g.terminal_color_8 = c.subtle
-  vim.g.terminal_color_9 = c.red
-  vim.g.terminal_color_10 = c.olive_bright
-  vim.g.terminal_color_11 = c.sand
-  vim.g.terminal_color_12 = c.cyan
-  vim.g.terminal_color_13 = c.violet
-  vim.g.terminal_color_14 = c.teal
-  vim.g.terminal_color_15 = c.cursor
+  local t = c.terminal
+
+  vim.g.terminal_color_background = t.background
+  vim.g.terminal_color_foreground = t.foreground
+
+  vim.g.terminal_color_0 = t.color0
+  vim.g.terminal_color_1 = t.color1
+  vim.g.terminal_color_2 = t.color2
+  vim.g.terminal_color_3 = t.color3
+  vim.g.terminal_color_4 = t.color4
+  vim.g.terminal_color_5 = t.color5
+  vim.g.terminal_color_6 = t.color6
+  vim.g.terminal_color_7 = t.color7
+  vim.g.terminal_color_8 = t.color8
+  vim.g.terminal_color_9 = t.color9
+  vim.g.terminal_color_10 = t.color10
+  vim.g.terminal_color_11 = t.color11
+  vim.g.terminal_color_12 = t.color12
+  vim.g.terminal_color_13 = t.color13
+  vim.g.terminal_color_14 = t.color14
+  vim.g.terminal_color_15 = t.color15
 end
 
 function M.groups()

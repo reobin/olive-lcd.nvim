@@ -15,7 +15,11 @@ USAGE                                                           *olive-crt-usage
 
 LUA SETUP                                                       *olive-crt-setup*
 
-  require('olive_crt').setup({
+  Call setup only if you want to change the defaults:
+
+  local olive_crt = require('olive_crt')
+
+  olive_crt.setup({
     transparent = false,
     styles = {
       comments = {},
