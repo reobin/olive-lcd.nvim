@@ -21,7 +21,7 @@ With `lazy.nvim`:
 
 ```lua
 {
-  "reobin/olive-crt.nvim",
+  "vimcolorschemes/olive-crt.nvim",
   lazy = false,
   priority = 1000,
   opts = {},
